@@ -15,6 +15,8 @@ lifecycleRuntimeKtx = "2.7.0"
 activityCompose = "1.8.2"
 composeBom = "2024.04.00"
 robolectric = "4.12.2"
+room = "2.6.1"
+google-devtools-ksp = "1.9.23-1.0.19"
 
 [libraries]
 tukaani-xz ={ group = "org.tukaani", name= "xz", version.ref =  "tukaani-xz-plugin" }
@@ -26,6 +28,10 @@ androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-co
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+androidx-room-ktx = { group = "androidx.room", name ="room-ktx", version.ref = "room" }
+
 androidx-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
@@ -39,4 +45,5 @@ robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectr
 xyz-simple-git = { id = "xyz.ronella.simple-git", version.ref = "xyz-simple-git-plugin" }
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
+googleDevtoolsKsp = { id = "com.google.devtools.ksp", version.ref = "google-devtools-ksp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

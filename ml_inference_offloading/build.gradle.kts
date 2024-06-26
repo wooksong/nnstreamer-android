@@ -1,5 +1,6 @@
 plugins {
     id(libs.plugins.androidApplication.get().pluginId)
+    id(libs.plugins.googleDevtoolsKsp.get().pluginId)
     id(libs.plugins.jetbrainsKotlinAndroid.get().pluginId)
 }
 
@@ -73,4 +74,9 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // Room
+    implementation(libs.androidx.room.runtime)
+    ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
 }
