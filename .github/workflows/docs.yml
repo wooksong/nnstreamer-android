@@ -1,6 +1,8 @@
 name: Create KDoc documentation
 
 on:
+  push:
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
@@ -19,3 +21,21 @@ jobs:
       with:
         name: docs
         path: ml_inference_offloading/build/dokka/html
+  deploy-gh-pages:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-22.04
+    needs: docs
+
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      # environment created automatically by GitHub
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
